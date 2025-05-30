@@ -1,1 +1,1 @@
-The Hamiltonian matrix is created by the module H_module.py and is run by the SHO_run.py script. The module requires the box edges ($z_{max}$, $z_{min}$) and step size (h) inputs. The default values are set at (-6, 6) and h=0.1
+The Hamiltonian matrix is created by the module H_module.py and is run by the SHO_run.py script. The module requires the box edges ($z_{max}$, $z_{min}$) and step size (h) as inputs. The default values are set at (-6, 6) and h=0.1

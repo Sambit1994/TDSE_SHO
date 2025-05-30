@@ -69,4 +69,4 @@ $f^{''}(z) = -\dfrac{1}{12h^2}[f(z-2h) -16 f(z-h) +30 f(z) -16 f(z+h) + f(z+2h)]
 
 So, the matrix eigen equation can be set up as: **HX** = **EX**, where
 
-![Hamiltonian Matrix](images/H_mat.png)
+![Hamiltonian Matrix](H_mat.png)

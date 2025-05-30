@@ -1,7 +1,7 @@
 #Solution of the time dependent Schrödinger equation for a 1-D simple harmonic oscillator problem
 -------------------------------------------------------------------------------------------------
 
-The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem. The time-independent and time-dependent formalisms are provided. The general description of the project is given below.
+The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem. The **Time-Independent** and **Time-Dependent** formalisms are provided. The general description of the project is given below.
 
 ---
 

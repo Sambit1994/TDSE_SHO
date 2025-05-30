@@ -1,4 +1,4 @@
-The H_matrix_finite_diff.f90 routine generates a [n*n] Hamiltonian matrix for a box length ($z_{min}=-10$ to $z_{max}=-10$), where $n = \dfrac{zmax-zmin}{h} + 1 $. $h$ is the step size (0.1). The output Hamiltonian matrix is written to the **mat.dat** file. The routine also has the possibility to add a `bump` to the potential and analyze the results. An example is in the `Example_w_bump_potential` section, based on the bump function $10(e^{-5x^{2}}$
+The H_matrix_finite_diff.f90 routine generates a [n*n] Hamiltonian matrix for a box length ($z_{min}=-10$ to $z_{max}=-10$), where $n = \dfrac{zmax-zmin}{h} + 1 $. $h$ is the step size (0.1). The output Hamiltonian matrix is written to the **mat.dat** file. The routine also has the possibility to add a `bump` to the potential and analyze the results. An example is in the `Example_w_bump_potential` section, based on the bump function $10 e^{-5x^{2}}$
 
 The lapak_diagonalisation.f90 routine uses the LAPACK routine $dsyev$ to find the eigenvalues and eigenvectors from **mat.dat** and writes them to the **Diag_mat.dat** file
 
@@ -10,7 +10,9 @@ The Inv_pow_Ite.f90 routine performs the **Inverse Power Iteration with Shift** 
 
 #Compilation
 `gfortran H_matrix_finite_diff.f90 -o H_matrix.x`
+
 `gfortran lapak_diagonalisation.f90 -o lpk_dia.x -llapack -lblas`
+
 `gfortran Inv_pow_Ite.f90 -o Inv_PI.x -llapack -lblas`
 
 ---

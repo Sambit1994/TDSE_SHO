@@ -1,25 +1,19 @@
-Solution of the time dependent Schrödinger equation for a 1D simple harmonic oscillator problem
-------------------------------------------------------------------------------------------------
-The scripts solve the Schrödinger equation and determine the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem.
+#Solution of the time dependent Schrödinger equation for a 1-D simple harmonic oscillator problem
+-------------------------------------------------------------------------------------------------
+The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem.
 
-# Quantum Harmonic Oscillator: Hamiltonian and Eigenvalues
-
-This project focuses on computing the **eigenvalues (energies)** and **eigenvectors** of the **Hamiltonian operator** \( H \), which for a one-dimensional system is given by:
+For a one-dimensional system:
 
 $$
-H = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x)
+H = KE + VE = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x)
 $$
-
-- The first term represents the **kinetic energy**.
-- The second term represents the **potential energy** \( V(x) \) of the system.
 
 ---
 
 ## The One-Dimensional Harmonic Oscillator
 
-The **simple harmonic oscillator** serves as a foundational model to describe molecular vibrations. Its importance stems from the fact that **near any local potential minimum**, the system behaves approximately like a harmonic oscillator.
+The one-dimensional **SHO** provides a simplistic model to demonstrate molecular vibrations. The importance of the harmonic oscillator problem stems from the fact that whenever there is a local potential minimum, the harmonic oscillator model gives the first approximation to the physics. The Taylor series expansion of the potential $V(x)$ around the minimum at $x = x_0$ is:
 
-### Taylor Expansion of Potential
 
 Expanding \( V(x) \) about a minimum at \( x = x_0 \):
 

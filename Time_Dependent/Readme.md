@@ -37,3 +37,7 @@ A series of output files is plotted
 **Eigenstate_cont_final.svg** : Contribution of various eigenstates to the resulting wavepacket at the end of simulation
 
 **animation.gif** : A gif image presenting the dynamic evolution of the wavepacket
+
+---
+
+The TD_Pot.py is a subset of TDSE_SHO.py routine and presents the evolution of the potential across time. The bump fucntion, $10e^{-5(x-1)^{2}} + 10e^{-5x^{2}} + 10e^{-5(x+1)^{2}}$, is used as example. The output are collected in the figures **Potential_function.svg** and **Animation_pot_function.gif**.

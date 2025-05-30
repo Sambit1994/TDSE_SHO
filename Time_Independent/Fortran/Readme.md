@@ -12,28 +12,36 @@ The Inv_pow_Ite.f90 routine performs the **Inverse Power Iteration with Shift** 
 #Inverse Power Iteration with shift
 ---
 
-The Power Iteration method provides the highest eigenvalue of a matrix $\bold{A}$. Starting from a guess vector $\bold{Y}_1$,
+The Power Iteration method provides the highest eigenvalue of a matrix $A$. Starting from a guess vector $Y_1$, 
 
-$\bold{Y}_1 = \sum_n C_n \bold{X}_n$ (since, eigenvectors (still unknown) to $\bold{A}$ form a complete set.)
+$Y_1 = \sum_n C_n X_n$ (since, eigenvectors (still unknown) to $A$ form a complete set.) 
 
-Applying $\bold{A}$ from left, we get
+Applying $A$ from left, we get 
 
-$\bold{Y}_2 = \bold{A} \bold{Y}_1 = \sum_n C_n \lambda_n \bold{X}_n$
+$Y_2$ =  $A Y_1 = \sum_n C_n \lambda_n X_n$ 
 
-$\bold{Y}_3 = \bold{A} \bold{Y}_2 = \sum_n C_n \lambda_n^2 \bold{X}_n$
+$Y_{3}$ =  $A Y_2 = \sum_n C_n \lambda_n^2 X_n$ 
 
-In general: $\bold{Y}_{i+1} = \bold{A} \bold{Y}_i = \sum_n C_n \lambda_n^i \bold{X}_n$
+In general: $Y_{i+1}$ =  $A Y_i = \sum_n C_n \lambda_n^i X_n$ 
 
-After sufficiently many applications of $\bold{A}$ the largest absolute
-eigenvalue will dominate completely
+After sufficiently many applications of $A$ the largest absolute eigenvalue will dominate completely 
 
-$\dfrac{\bold{Y}_i^\dagger \bold{A} \bold{Y}_i}{\bold{Y}_i^\dagger \bold{Y}_i} \Rightarrow \max |\lambda_n|$
+$\dfrac{Y_i^\dagger A Y_i}{Y_i^\dagger Y_i} \Rightarrow max |\lambda_n| $
 
-For normalised vectors, $\bold{Y}_i^\dagger \bold{A} \bold{Y}_i \Rightarrow \max |\lambda_n|$
+for normalised vectors, $Y_i^\dagger A Y_i \Rightarrow max |\lambda_n| $
 
----
+In contrast to the power iteration, the inverse power iteration calculates the lowest eigenvalue of matrix $A$ as: 
 
-In contrast to the power iteration, the inverse power iteration calculates the lowest eigenvalue of matrix $\bold{A}$ as:
+$$A X_n = \lambda_n X_n  \Rightarrow \lambda^{-1}X_n = A^{-1} X_n$$
 
-```math
-\bold{A}\bold{X}_n = \lambda_n \bold{X}_n  \Rightarrow \lambda^{-1}\bold{X}_n = \bold{A}^{-1} \bold{X}_n
+where, power iteration of $A^{-1}$ gives the lowest eigenvalue. However, instead of determining the $A^{-1}$ the following matrix equation is solved 
+
+$A Y_{i+1} = Y_i$
+
+Here, one starts from the guess vector $Y_i$ and solves the matrix equation to get to the next vector $Y_{i+1}$, which further goes through the same procedure. After numerous iterations 
+
+$Y_i^\dagger A^{-1} Y_i \Rightarrow \dfrac{1}{min |\lambda_n|} $; for normalised vectors 
+
+The `Inverse Power Iteration with shift` is utilised to obtain the smallest eigenvalue to a shifted matrix $A$, such that 
+
+$A \Rightarrow A - \eta I$, where $\eta$ is the scalar constant close to the nearest eigenvalue.

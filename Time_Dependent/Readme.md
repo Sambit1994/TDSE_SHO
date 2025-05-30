@@ -40,4 +40,4 @@ A series of output files are plotted
 
 ---
 
-The TD_Pot.py is a subset of TDSE_SHO.py routine and presents the evolution of the potential across time. The bump fucntion, $10e^{-5(x-1)^{2}} + 10e^{-5x^{2}} + 10e^{-5(x+1)^{2}}$, is used as example. The output are collected in the figures **Potential_function.svg** and **Animation_pot_function.gif**.
+The TD_Pot.py is a subset of TDSE_SHO.py routine and presents the evolution of the potential across time. The bump function, $10e^{-5(x-1)^{2}} + 10e^{-5x^{2}} + 10e^{-5(x+1)^{2}}$, is used as an example. The results are collected in the figures **Potential_function.svg** and **Animation_pot_function.gif**.

@@ -68,3 +68,5 @@ $f^{''}(z) = C_{-2h}f(z-2h) - C_{-h}f(z-h) + C_{0h}f(z) + C_hf(z+h) + C_{2h}f(z+
 $f^{''}(z) = -\dfrac{1}{12h^2}[f(z-2h) -16 f(z-h) +30 f(z) -16 f(z+h) + f(z+2h)] + O(h^4)$
 
 So, the matrix eigen equation can be set up as: **HX** = **EX**, where
+
+![Hamiltonian Matrix](images/H_mat.png)

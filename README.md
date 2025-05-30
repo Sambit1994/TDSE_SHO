@@ -1,7 +1,7 @@
 #Solution of the time dependent Schrödinger equation for a 1-D simple harmonic oscillator problem
 -------------------------------------------------------------------------------------------------
 
-The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem. The time-independent and time-dependent formalisms are provided. The general description is given below
+The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem. The time-independent and time-dependent formalisms are provided. The general description of the project is given below.
 
 ---
 
@@ -56,6 +56,15 @@ $$
 \frac{1}{2} \left( -\frac{\partial^2}{\partial z^2} + z^2 \right) \Psi = \frac{E}{\hbar \omega} \Psi
 $$
 
-The **energy eigenvalues** are expressed in **units of $\hbar \omega$**.
+The **energy eigenvalues** are expressed in **units of $\hbar\omega$**.
 
+---
 
+## Solving the eigenvalue problem
+In order to find the first few eigenvalues and eigenvectors, the space is spanned in a limited, bounded region from $z_{min}$ to $z_{max}$, with a linear grid. Outside the boundary, the wave function is considered zero ($\approx$ harmonic oscillator in a potential well). The kinetic energy term in the form of the second-order derivative is discretized with a five-point formula (finite difference approach) as:
+
+$f^{''}(z) = C_{-2h}f(z-2h) - C_{-h}f(z-h) + C_{0h}f(z) + C_hf(z+h) + C_{2h}f(z+2h) + O(h^4)$
+
+$f^{''}(z) = -\dfrac{1}{12h^2}[f(z-2h) -16 f(z-h) +30 f(z) -16 f(z+h) + f(z+2h)] + O(h^4)$
+
+So, the matrix eigen equation can be set up as: **HX** = **EX**, where

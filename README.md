@@ -3,7 +3,7 @@
 
 The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem. The time-independent and time-dependent formalisms are provided. The general description is given below
 
---
+---
 
 For a one-dimensional system:
 

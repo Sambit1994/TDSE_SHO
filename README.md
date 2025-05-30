@@ -1,6 +1,9 @@
 #Solution of the time dependent Schrödinger equation for a 1-D simple harmonic oscillator problem
 -------------------------------------------------------------------------------------------------
-The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem.
+
+The program solves the Schrödinger equation and determines the eigenvalues and eigenvectors for a 1-D simple harmonic oscillator (SHO) problem. The time-independent and time-dependent formalisms are provided. The general description is given below
+
+--
 
 For a one-dimensional system:
 
@@ -8,30 +11,24 @@ $$
 H = KE + VE = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + V(x)
 $$
 
----
+The one-dimensional **SHO** provides a simplistic model to demonstrate molecular vibrations. The importance of the harmonic oscillator problem stems from the fact that whenever there is a local potential minimum, the harmonic oscillator model gives the first approximation to the physics. The Taylor series expansion of the potential $(V(x))$ around the minimum at $x = x_0$ is:
 
-## The One-Dimensional Harmonic Oscillator
-
-The one-dimensional **SHO** provides a simplistic model to demonstrate molecular vibrations. The importance of the harmonic oscillator problem stems from the fact that whenever there is a local potential minimum, the harmonic oscillator model gives the first approximation to the physics. The Taylor series expansion of the potential $V(x)$ around the minimum at $x = x_0$ is:
-
-
-Expanding \( V(x) \) about a minimum at \( x = x_0 \):
 
 $$
 V(x) = V(x_0) + V'(x - x_0) + \frac{1}{2}V''(x - x_0)^2 + \dots
 $$
 
-Ignoring constant and linear terms (assuming \( x_0 = 0 \)):
+$$
+\Rightarrow V(x) - V(x_0) \approx \dfrac{1}{2}k(x-x_0)^2
+$$
+
+Subtracting the constant background potential $V(x_0)$ and assuming $X_0$ at origin,
 
 $$
 V(x) \approx \frac{1}{2} m \omega^2 x^2
 $$
 
----
-
-## Final Form of the Hamiltonian
-
-Substituting into the original Hamiltonian:
+The form of the Hamiltonian then becomes:
 
 $$
 H = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + \frac{1}{2} m \omega^2 x^2
@@ -59,6 +56,6 @@ $$
 \frac{1}{2} \left( -\frac{\partial^2}{\partial z^2} + z^2 \right) \Psi = \frac{E}{\hbar \omega} \Psi
 $$
 
-Thus, the **energy eigenvalues** are expressed in **units of \( \hbar \omega \)**.
+The **energy eigenvalues** are expressed in **units of $\hbar \omega$**.
 
 

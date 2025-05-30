@@ -2,13 +2,14 @@ The H_matrix_finite_diff.f90 routine generates a [n*n] Hamiltonian matrix for a 
 
 The lapak_diagonalisation.f90 routine uses the LAPACK routine $dsyev$ to find the eigenvalues and eigenvectors from **mat.dat** and writes them to the **Diag_mat.dat** file
 
-The first five eigenvectors are collected in the **Eigenvectors.dat** file and plotted (gnuplot plot_eigenvector.plt). The first column is the box length (-10 to 10), spanned with h=0.1.
+The first five eigenvectors are collected in the **Eigenvectors.dat** file and plotted (Eigenvectors_SHO.svg). The first column is the box length (-10 to 10), spanned with h=0.1.
 
 The Inv_pow_Ite.f90 routine performs the **Inverse Power Iteration with Shift** approach to converge to the nearest eigenvalue. A default shift of 1.3 is used as an example. The output is collected in the **Dia_IPI.dat** file.
 
 ---
 
 #Compilation
+
 `gfortran H_matrix_finite_diff.f90 -o H_matrix.x`
 
 `gfortran lapak_diagonalisation.f90 -o lpk_dia.x -llapack -lblas`

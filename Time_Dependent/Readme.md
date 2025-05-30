@@ -24,7 +24,7 @@ $$\Psi(t_{n+1}) = \sum_i e^{-iE_i(t_{n+1})\Delta t/\hbar} \ket{i_{t+1}}\braket{i
 
 ---
 
-A series of output files is plotted
+A series of output files are plotted
 
 **Eigenvector_t0.svg** : Eigenvector at t=0
 
